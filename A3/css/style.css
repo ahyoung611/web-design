@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* 공통속성 */
+:root {
+    --main-colors: rgb(35, 16, 87);
+    --sub-colors: rgb(94, 92, 201);
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-c {
+    align-items: center;
+}
+
+.just-c {
+    justify-content: center;
+}
+
+.just-sb {
+    justify-content: space-between;
+}
+
+.wrap {
+    width: 1200px;
+    margin: auto;
+}
+
+/* header */
+header {
+    height: 100px;
+}
+
+nav {
+    width: 45%;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+}
+
+nav ul li.main-menu {
+    flex: 1;
+    position: relative;
+}
+
+
+nav ul li.main-menu>a {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav ul li.main-menu:hover>a {
+    background-color: var(--main-colors);
+    color: #fff;
+}
+
+nav ul.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
+}
+
+nav ul.sub-menu li a {
+    padding: 5px;
+}
+
+nav ul.sub-menu li:hover a {
+    background-color: var(--sub-colors);
+    color: #fff;
+}
+
+/* slide */
+.slide-container {
+    height: 300px;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+}
+
+.slide .desc {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.slide .desc h2 {
+    font-size: 22px;
+    padding-bottom: 10px;
+    color: var(--main-colors);
+}
+
+.slide .desc p {
+    font-size: 15px;
+}
+
+/* contents */
+.contents {
+    height: 200px;
+}
+
+.contents>div {
+    width: 33.3333%;
+}
+
+.tab-menu {
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.tab-menu li.on a {
+    background: var(--main-colors);
+    color: #fff;
+    border: 1px solid var(--main-colors);
+}
+
+.tab-menu a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #dedede;
+    color: #a0a0a0;
+}
+
+.tabs {
+    position: relative;
+    top: 0;
+    width: 95%;
+    margin: auto;
+    height: calc(200px - 45px);
+    border: 1px solid var(--main-colors);
+}
+
+.tab {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.notice ul li {
+    border-bottom: 1px solid #dedede;
+    color: #a0a0a0;
+}
+
+.notice ul li:hover{
+    color: var(--main-colors);
+} 
+
+.notice ul li a {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.gallery {
+    display: none;
+}
+
+.gallery ul {
+    padding: 10px;
+    height: 100%;
+}
+
+.banner{
+    position: relative;
+}
+
+.banner figcaption{
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    color: var(--main-colors);
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.banner figcaption:hover{
+    background: var(--main-colors);
+    color: #fff;
+}
+
+.direct{
+    position: relative;
+}
+
+.direct figcaption{
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    color: var(--main-colors);
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.direct figcaption:hover{
+    background: var(--main-colors);
+    color: #fff;
+}
+
+/* footer */
+footer{
+    height: 100px;
+}
+
+.footer-r{
+    width: calc(100% - 200px);
+    text-align: center;
+}
+
+.footer-menu{
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-menu li{
+    border-bottom: 2px solid #dedede;
+    padding: 5px;
+}
+
+.footer-menu li:hover{
+    border-bottom: 2px solid var(--main-colors);
+}
+
+/* popup */
+.popup{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid var(--main-colors);
+}
+
+.popup .close{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #dedede;
+    color: #a0a0a0;
+}
+
+.popup .close:hover{
+    border: 1px solid var(--main-colors);
+    background-color: var(--main-colors);
+    color: #fff;
+}
