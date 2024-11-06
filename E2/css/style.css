@@ -1,0 +1,294 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* 공통속성 */
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: "맑은고딕";
+}
+
+:root {
+    --main-color: rgb(61, 20, 7);
+    --sub-color: rgb(241, 113, 7);
+}
+
+.flex {
+    display: flex;
+}
+
+.align-c {
+    align-items: center;
+}
+
+.just-sb {
+    justify-content: space-between;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+header,
+.contents,
+.slide-container {
+    height: calc(100% - 100px);
+}
+
+/* header */
+header {
+    width: 200px;
+    text-align: center;
+    border-right: 1px solid #dedeed;
+}
+
+header h1 {
+    padding: 30px 0;
+}
+
+nav {
+    width: 95%;
+    margin: 20px auto;
+}
+
+nav a {
+    display: block;
+}
+
+li.main-menu>a {
+    padding: 10px;
+    border-bottom: 2px solid var(--main-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+li.main-menu:hover>a {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+ul.sub-menu {
+    display: none;
+}
+
+ul.sub-menu li a {
+    padding: 8px;
+}
+
+ul.sub-menu li:hover {
+    color: var(--sub-color);
+    font-size: 16px;
+}
+
+/* contents */
+.contents {
+    width: 400px;
+}
+
+.notice,
+.gallery {
+    height: calc((100% - 150px)/2);
+}
+
+.c-menu {
+    padding: 10px;
+    border-top: 1px solid #dedede;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.c-menu p:hover{
+    color: var(--sub-color);
+}
+
+.notice ul,
+.gallery ul {
+    padding: 10px;
+    height: calc(100% - 48px);
+}
+
+.notice ul li {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #dedede;
+}
+
+.notice ul li:hover{
+    color: var(--sub-color);
+}
+
+.notice ul li a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60%;
+}
+
+.notice ul li span {
+    width: 20%;
+    text-align: center;
+}
+
+.gallery img {
+    width: 185px;
+}
+
+.gallery p {
+    text-align: center;
+    padding: 5px;
+}
+
+.link {
+    height: 150px;
+    border-top: 1px solid #dedeed;
+    padding: 10px;
+}
+
+.link ul {
+    height: 100%;
+}
+
+.link img {
+    width: 70px;
+}
+
+.link p {
+    text-align: center;
+    padding: 5px;
+}
+
+/* slide-container */
+.slide-container {
+    width: calc(100% - 600px);
+    overflow: hidden;
+}
+
+.slide-wrap {
+    position: relative;
+}
+
+.slide {
+    position: relative;
+    height: 819px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide .desc {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #dedeed;
+}
+
+footer h1 {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #dedede;
+}
+
+.copyright {
+    line-height: 1.5;
+}
+
+.family-site {
+    width: 300px;
+    text-align: center;
+}
+
+.family-site select{
+    padding: 10px 20px;
+}
+
+/* popup */
+.modal-box{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.popup{
+    width: 25%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    border: 4px solid var(--main-color);
+    padding: 25px 25px 40px 25px;
+}
+
+.popup h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.popup ul{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.popup ul li{
+    list-style: inherit;
+    padding: 5px;
+    line-height: 1.5;
+}
+
+a.close{
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    display: inline-block;
+    border: 1px solid #dedede;
+    padding: 5px 10px;
+}
+
+a.close:hover{
+    background-color: var(--main-color);
+    color: #fff;
+}
+
