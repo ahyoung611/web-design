@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* 공통속성 */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+:root {
+    --main-color: rgb(5, 5, 48);
+    --sub-color: rgb(247, 162, 4);
+}
+
+.flex {
+    display: flex;
+}
+
+.align-c {
+    align-items: center;
+}
+
+.just-sb {
+    justify-content: space-between;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+/* header */
+header {
+    width: 200px;
+    height: calc(100% - 100px);
+    border-right: 1px solid #dedeed;
+}
+
+header h1 {
+    padding: 30px 0;
+}
+
+nav {
+    width: 95%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+}
+
+li.main-menu {
+    position: relative;
+}
+
+li.main-menu>a {
+    padding: 10px;
+    border-bottom: 2px solid var(--main-color);
+}
+
+li.main-menu:hover>a {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+ul.sub-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    background-color: rgba(5, 5, 48, .9);
+    color: #fff;
+}
+
+ul.sub-menu li a {
+    padding: 10px;
+}
+
+ul.sub-menu li:hover a {
+    color: var(--sub-color);
+}
+
+
+/* contents */
+.contents {
+    width: 400px;
+    height: calc(100% - 100px);
+}
+
+.banner {
+    height: 20%;
+    padding: 10px;
+    border-bottom: 1px solid #dedede;
+}
+
+.banner .desc h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner .desc {
+    padding: 10px;
+}
+
+.banner .desc p {
+    font-size: 15px;
+}
+
+.banner .right-arrow img {
+    width: 50px;
+    height: 50px;
+}
+
+/* notice, gallery */
+.notice,
+.gallery {
+    height: 40%;
+    padding: 10px;
+}
+
+h3 {
+    color: var(--main-color);
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #fff;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    border-top: 1px solid #333;
+    margin-bottom: -1px;
+    margin-left: 5px;
+    border-radius: 10px 10px 0 0;
+}
+
+.notice ul,
+.gallery ul {
+    border: 1px solid #333;
+    height: calc(100% - 40px);
+    background-color: #fff;
+    padding: 10px;
+}
+
+.notice ul li {
+    padding: 10px;
+    border-bottom: 1px solid #dedede;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notice ul li:hover {
+    color: var(--sub-color);
+    border-bottom: 1px solid var(--sub-color);
+}
+
+.notice ul li a {
+    width: 70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.notice ul li span {
+    width: 25%;
+    text-align: center;
+}
+
+.gallery ul li p {
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.gallery img{
+    width: 170px;
+}
+
+/*.slide-container */
+.slide-container {
+    width: calc(100% - 600px);
+    height: calc(100% - 100px);
+    overflow: hidden;
+}
+
+.slide-wrap{
+    position: relative;
+}
+
+.slide{
+    position: relative;
+}
+
+.slide .desc{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(5, 5, 48, .7);
+    color: #fff;
+    padding: 15px;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #dedede;
+}
+
+footer h1{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #dedede;
+}
+
+.copyright{
+    width: calc(100% - 500px);
+    text-align: center;
+    font-size: 14px;
+}
+
+.sns{
+    width: 300px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sns img{
+    border-radius: 10px;
+}
+
+/* popup */
+.popup{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 25%;
+    background-color: #fff;
+    border: 2px solid var(--main-color);
+    padding: 20px 20px 70px 20px;
+}
+
+.popup h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.popup p{
+    padding: 5px 10px;
+}
+
+.popup .color-y{
+    color: var(--sub-color);
+    font-size: 14px;
+}
+
+a.close{
+    display: inline-block;
+    border: 1px solid #dedede;
+    padding: 5px 10px;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+a.close:hover{
+    background-color: var(--main-color);
+    color: #fff;
+}
+

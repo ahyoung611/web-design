@@ -193,6 +193,12 @@ ul.sub-menu li:hover {
     height: 819px;
 }
 
+.sldie a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .slide img {
     width: 100%;
     height: 100%;
